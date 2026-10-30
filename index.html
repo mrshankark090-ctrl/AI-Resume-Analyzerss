@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Resume Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://unpkg.com/mammoth@1.8.0/mammoth.browser.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <span class="eyebrow">SMART CAREER TOOL</span>
+      <h1>AI Resume Analyzer</h1>
+      <p>Upload your resume to review skills and job keyword matches.</p>
+    </header>
+
+    <section class="card">
+      <div class="upload-zone" id="dropzone">
+        <div class="upload-icon">📄</div>
+        <h2>Drop your resume here</h2>
+        <p>PDF or DOCX · Maximum 5 MB</p>
+        <input id="fileInput" type="file" accept=".pdf,.docx" hidden>
+        <div class="file-badge" id="fileBadge">No file selected</div>
+      </div>
+
+      <div class="form-section">
+        <label for="jobRole">Target Job Role</label>
+        <input id="jobRole" type="text" placeholder="e.g. Python Developer">
+        <button id="analyzeBtn" class="primary-btn" type="button">Analyze Resume</button>
+        <p class="note">Browser-based keyword analysis demo.</p>
+        <p id="status" class="status"></p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Resume Preview</h2>
+      <div class="preview-box" id="previewBox">
+        Your resume text will appear here.
+      </div>
+    </section>
+
+    <section id="results" hidden>
+      <section class="card score-card">
+        <div class="score-circle" id="scoreCircle">
+          <div class="score-inner">
+            <strong id="scoreValue">0</strong>
+            <span>/100</span>
+          </div>
+        </div>
+        <div class="score-content">
+          <h2 id="scoreHeading">Resume Analysis</h2>
+          <p id="scoreDescription"></p>
+          <span class="grade" id="grade"></span>
+        </div>
+      </section>
+
+      <div class="grid">
+        <section class="card">
+          <h2 class="section-title">Detected Skills</h2>
+          <div class="tags" id="foundSkills"></div>
+        </section>
+        <section class="card">
+          <h2 class="section-title">Skills to Consider</h2>
+          <div class="tags" id="missingSkills"></div>
+        </section>
+      </div>
+
+      <section class="card">
+        <h2 class="section-title">ATS Keyword Match</h2>
+        <div id="keywordProgress"></div>
+      </section>
+
+      <section class="card">
+        <h2 class="section-title">Recommendations</h2>
+        <ul id="recommendations"></ul>
+        <button id="downloadBtn" class="download-btn">
+          Download Analysis Report
+        </button>
+      </section>
+    </section>
+
+    <footer>AI Resume Analyzer · Student Project Demo</footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 34px 18px;
+  font-family: Inter, Arial, sans-serif;
+  color: #1e293b;
+  background: linear-gradient(135deg, #eef2ff, #f5f3ff, #fff);
+}
+
+.container {
+  width: min(100%, 980px);
+  margin: auto;
+}
+
+.hero {
+  text-align: center;
+  margin: 10px 0 30px;
+}
+
+.eyebrow {
+  color: #6366f1;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 5vw, 46px);
+  color: #4f46e5;
+}
+
+.hero p {
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.card {
+  background: rgba(255,255,255,.9);
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 12px 30px rgba(31,41,55,.07);
+}
+
+.upload-zone {
+  border: 2px dashed #818cf8;
+  border-radius: 16px;
+  padding: 34px 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.upload-zone:hover {
+  background: #f5f3ff;
+  border-color: #4f46e5;
+}
+
+.upload-icon {
+  font-size: 38px;
+}
+
+.upload-zone h2 {
+  font-size: 20px;
+}
+
+.upload-zone p,
+.note {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.file-badge {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 13px;
+  border-radius: 30px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 13px;
+}
+
+.form-section {
+  margin-top: 22px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dbe1ea;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+.primary-btn,
+.download-btn {
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 15px;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(135deg,#6366f1,#8b5cf6);
+}
+
+.primary-btn:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+.download-btn {
+  background: linear-gradient(135deg,#059669,#10b981);
+}
+
+.status {
+  color: #4f46e5;
+  font-size: 13px;
+  min-height: 18px;
+}
+
+.section-title {
+  margin: 0 0 16px;
+  font-size: 15px;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.preview-box {
+  min-height: 130px;
+  max-height: 280px;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  padding: 16px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  color: #64748b;
+  background: #f8fafc;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.score-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.score-circle {
+  width: 126px;
+  height: 126px;
+  flex: 0 0 126px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: conic-gradient(#10b981 0deg,#e2e8f0 0deg);
+}
+
+.score-inner {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.score-inner strong {
+  font-size: 30px;
+}
+
+.score-inner span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.score-content p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.grade {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 7px 13px;
+  border-radius: 30px;
+  background: #dcfce7;
+  color: #166534;
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.tag {
+  padding: 8px 12px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tag-found {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.tag-missing {
+  background: #fff1f2;
+  color: #9f1239;
+}
+
+.empty {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.progress-row {
+  margin: 14px 0;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.progress-track {
+  height: 9px;
+  background: #e5e7eb;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #10b981;
+}
+
+.recommendations {
+  padding-left: 20px;
+  color: #475569;
+  line-height: 1.8;
+}
+
+footer {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 12px;
+  padding: 8px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 650px) {
+  body {
+    padding: 22px 12px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .score-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
