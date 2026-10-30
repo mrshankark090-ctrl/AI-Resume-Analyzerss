@@ -81,4 +81,4 @@ Domain: Artificial Intelligence / Career Development
 
 ⭐ If you find this project useful, feel free to explore the live application.
 
-Made with ❤️ by Shankar Kumar Choudhary
+Made with ❤️ by Mr Shankar Kumar
